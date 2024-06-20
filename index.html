@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>IMTuKa - BMI Kalkulator</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: NiceAdmin
+  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+  * Updated: Apr 20 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <span class=" d-lg-block">IMTuKa</span>
+      </a>
+    </div><!-- End Logo -->
+
+
+    <nav class="header-nav ms-auto">
+    </nav><!-- End Icons Navigation -->
+
+  </header><!-- End Header -->
+
+  <!-- ======= Sidebar ======= -->
+ 
+  <main id="main" class="main">
+
+    <section class="section dashboard">
+      <div class="row">
+
+        <!-- Left side columns -->
+        <div class="col-lg-8">
+          <div class="row">
+
+            <!-- Sales Card -->
+            <div class="col-xxl-12 col-md-6">
+              <div class="card info-card sales-card">
+
+
+                <div class="card-body">
+                  <h5 class="card-title"> <span> </span></h5>
+
+                  <div class="d-flex align-items-center">
+                    <div class="ps-3">
+                      <h6 >IMT Kalkulator</h6>
+                     <span class="text-muted small pt-2 ps-1">Berat badan ideal adalah impian semua orang. Tidak hanya memiliki bentuk tubuh yang menunjang penampilan, berat badan ideal juga menandakan kondisi tubuh yang sehat. Bagaimana denganmu? Yuk, hitung sekarang di IMT Kalkulator.</span>
+
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+            <!-- End Sales Card -->
+
+
+            <!-- Reports -->
+<div class="col-12">
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Hitung kategori Berat Badan Anda</h5>
+      <form class="row g-3" id="bmi-form">
+        <div class="col-md-12">
+          <div class="form-floating">
+            <input type="text" class="form-control" id="name-input" placeholder="Nama">
+            <label for="name-input">Nama</label>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="form-floating mb-3">
+            <select class="form-select" id="gender-select" aria-label="Jenis Kelamin">
+              <option hidden></option>
+              <option value="Laki-Laki">Laki-Laki</option>
+              <option value="Perempuan">Perempuan</option>
+            </select>
+            <label for="gender-select">Jenis Kelamin</label>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-floating">
+            <input type="number" class="form-control" id="height-input" placeholder="Tinggi Badan">
+            <label for="height-input">Tinggi badan</label>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-floating">
+            <input type="number" class="form-control" id="weight-input" placeholder="Berat Badan">
+            <label for="weight-input">Berat badan</label>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <button type="submit" class="w-100 mt-4 btn btn-success">Hitung</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div><!-- End Reports -->
+
+<!-- Recent Sales -->
+<div class="col-12">
+  <div class="card recent-sales overflow-auto">
+    <div class="card-body">
+      <h5 class="card-title">Hasil</h5>
+      <div class="row">
+        <div class="col-md-4">
+          <img src="assets/img/hero.png" class="w-100" alt="">
+        </div>
+        <div class="col-md-8">
+          <ul class="list-unstyled">
+            <li class="my-5" id="name-result">Nama : </li>
+            <li class="my-5" id="gender-result">Jenis Kelamin :</li>
+            <li class="my-5" id="height-result">Tinggi Badan : </li>
+            <li class="my-5" id="weight-result">Berat Badan : </li>
+            <li class="my-5 fw-bold" id="category-result">Kategori Berat Badan</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><!-- End Recent Sales -->
+
+          </div>
+        </div>
+        <!-- End Left side columns -->
+
+        <!-- Right side columns -->
+        <div class="col-lg-4">
+
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Kategori Berat badan</h5>
+              <!-- Progress Bars with Striped Backgrounds-->
+              <div class="d-flex justify-content-center align-items-center" style="height: 40px;">
+                <button type="button" class="btn btn-secondary " data-bs-toggle="tooltip" data-bs-placement="top" title="0 - 18.5" style="border-radius: 0px;border: 1px solid rgba(255,255,255,1);height: 100%;width: 30%;color: white;font-size: 10px;">
+                  Kurus
+                </button>
+                <button type="button" class="btn btn-success" data-bs-toggle="tooltip" data-bs-placement="top" title="18.5 - 25" style="border-radius: 0px;border: 1px solid rgba(255,255,255,1);height: 100%;width: 20%;font-size: 10px;">
+                  Ideal
+                </button>
+                <button type="button" class="btn btn-warning" data-bs-toggle="tooltip" data-bs-placement="top" title="25 - 30" style="border-radius: 0px;border: 1px solid rgba(255,255,255,1);height: 100%;width: 20%;font-size: 10px;">
+                  Gemuk
+                </button>
+                <button type="button" class="btn btn-danger" data-bs-toggle="tooltip" data-bs-placement="top" title="30++" style="border-radius: 0px;border: 1px solid rgba(255,255,255,1);height: 100%;width: 30%;font-size: 10px;">
+                  Obesitas
+                </button>
+              </div>
+
+            </div>
+          </div>
+          <!-- Recent Activity -->
+          <div class="card">
+
+            <div class="card-body">
+              <h5 class="card-title">Apa Itu IMT ?</h5>
+              <p>Indeks Massa Tubuh (IMT) adalah cara menghitung berat badan ideal berdasarkan tinggi dan berat badan. IMT juga dapat dibedakan berdasarkan usia.</p>
+
+            </div>
+          </div><!-- End Recent Activity -->
+
+          <!-- Budget Report -->
+          <div class="card">
+
+            <div class="card-body pb-0">
+              <h5 class="card-title">Apa itu Kalkulator IMT ?</h5>
+
+              <p>Kalkulator IMT adalah alat untuk mengidentifikasi apakah berat badan kamu termasuk dalam kategori ideal atau tidak. Kalkulator ini dapat digunakan oleh seseorang yang berusia 20 tahun ke atas. <br><br>Perlu diingat bahwa Kalkulator IMT ini tidak dapat diaplikasikan untuk ibu hamil dan anak-anak karena standar IMT yang berbeda. <br><br>
+                Hal yang perlu diperhatikan pada Kalkulator IMT:
+                <ul>
+                  <li>
+                    IMT Normal berada pada kisaran 17-25
+                  </li>
+                  <li>
+                    Jika angka IMT melebihi 25, maka kamu memiliki berat badan berlebih
+                  </li>
+                  <li>
+                    Jika angka IMT berada di bawah 17, maka kamu memiliki berat badan rendah
+
+                  </li>
+                  <li>
+                    Jika angka IMT sudah melebihi angka 27, sebaiknya segera dilakukan penanganan untuk mencegah timbulnya penyakit
+                    
+                  </li>
+                </ul>
+              </p>
+              </div>
+          </div><!-- End Budget Report -->
+
+          
+
+        </div><!-- End Right side columns -->
+
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="copyright">
+       <strong><span>Taufiqi Ridho Maulana</span></strong>. All Rights Reserved
+    </div>
+    <div class="credits">
+      <!-- All the links in the footer should remain intact. -->
+      <!-- You can delete the links only if you purchased the pro version. -->
+      <!-- Licensing information: https://bootstrapmade.com/license/ -->
+      <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/chart.js/chart.umd.js"></script>
+  <script src="assets/vendor/echarts/echarts.min.js"></script>
+  <script src="assets/vendor/quill/quill.js"></script>
+  <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <script>
+   // Get the form and submit button
+const form = document.getElementById('bmi-form');
+const submitButton = form.querySelector('button[type="submit"]');
+
+// Get the list items where the results will be displayed
+const nameItem = document.getElementById('name-result');
+const genderItem = document.getElementById('gender-result');
+const heightItem = document.getElementById('height-result');
+const weightItem = document.getElementById('weight-result');
+const categoryItem = document.getElementById('category-result');
+
+// Add an event listener for the form submission
+form.addEventListener('submit', (event) => {
+  event.preventDefault(); // Prevent the default form submission
+
+  // Get the input values
+  const name = document.getElementById('name-input').value;
+  const gender = document.getElementById('gender-select').value;
+  const height = parseFloat(document.getElementById('height-input').value);
+  const weight = parseFloat(document.getElementById('weight-input').value);
+
+  // Calculate the BMI and determine the category
+  const bmi = weight / ((height / 100) ** 2);
+  let category;
+  if (bmi < 18.5) {
+    category = 'Kurus';
+    categoryItem.style.color =  "gray"
+  } else if (bmi >= 18.5 && bmi <= 22.9) {
+    category = 'Ideal';
+    categoryItem.style.color = "green"
+  } else if (bmi >= 23 && bmi <= 29.9) {
+    category = 'Overweight';
+    categoryItem.style.color = "orange"
+  } else {
+    category = 'Obesitas';
+    categoryItem.style.color = "red"
+  }
+
+  // Display the results in the list items
+  nameItem.textContent = `Nama: ${name}`;
+  genderItem.textContent = `Jenis Kelamin: ${gender}`;
+  heightItem.textContent = `Tinggi Badan: ${height} cm`;
+  weightItem.textContent = `Berat Badan: ${weight} kg`;
+  categoryItem.textContent = `Kategori Badan: ${bmi.toFixed(1)} - ${category}`;
+
+  // Scroll ke div.recent-sales
+  const recentSalesDiv = document.querySelector('.recent-sales');
+  recentSalesDiv.scrollIntoView({ behavior: 'smooth' });
+});
+  </script>
+
+</body>
+
+</html>
